@@ -1,5 +1,6 @@
 # T6CNN：A genome-scale prediction tool for bacterial type VI secreted effector proteins based on convolutional neural networks
-
+   <div align="center"><img width="200" src="./images/workflow.png"/></div>
+   <center>Workflow</center>
 ## Set up
 
 The standalone version of T6CNN has been tested in Linux.
@@ -11,6 +12,12 @@ Please check the `requirements.txt` file for more details on required Python pac
 pip install -r requirements.txt
 
 ```
+## Data Processing
+
+The data processing codes in xxx.py including:
+xxx
+xxx
+xxx
 
 ## Using T6CNN
 
@@ -23,9 +30,9 @@ python T6CNN.py -p feature_matrix.txt -f sequence.fa -pr 'model prefix' -d CUDA
 We have compared T6CNN with existing prediction tools according to the perfomance on an independent test set(28 T6SEs + 185 none-T6SEs). 
 |           Method          |  ACC  |  SN   |  SP   |  PR   |  F1   |  MCC  |
 | :-----------------------: | :---: | :---: | :---: | :---: | :---: | :---: |
-|        Bastion6           | 0.883 | 0.821 | 0.892 | 0.535 | 0.648 | 0.600 |
-|        PyPredT6           | 0.718 | 0.500 | 0.751 | 0.233 | 0.318 | 0.189 |
-|          T6CNN          | 0.953 | 0.929 | 0.958 | 0.765 | 0.839 | 0.817 |
+|         Bastion6          | 0.883 | 0.821 | 0.892 | 0.535 | 0.648 | 0.600 |
+|         PyPredT6          | 0.718 | 0.500 | 0.751 | 0.233 | 0.318 | 0.189 |
+|          T6CNN            | 0.953 | 0.929 | 0.958 | 0.765 | 0.839 | 0.817 |
 
 
 
