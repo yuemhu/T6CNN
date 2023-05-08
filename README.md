@@ -1,6 +1,7 @@
 # T6CNN：A genome-scale prediction tool for bacterial type VI secreted effector proteins based on convolutional neural networks
-   <div align="center"><img width="200" src="./images/workflow.png"/></div>
-   <center>Workflow</center>
+  <center>Workflow</center>
+  <div align="center"><img width="600" src="./images/workflow.png"/></div>
+
 ## Set up
 
 The standalone version of T6CNN has been tested in Linux.
