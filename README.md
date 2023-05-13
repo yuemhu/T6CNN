@@ -6,7 +6,7 @@
 
 The standalone version of T6CNN has been tested in Linux.
 
-Before using the T6CNN, please ensure that Python has been installed in your server. 
+Before using the T6CNN, please ensure that Python version ≥3.9 has been installed in your server. 
 Please check the `requirements.txt` file for more details on required Python packages. You can create new environment and install all required packages with:
 
 ```shell
