@@ -23,7 +23,11 @@ xxx
 ## Using T6CNN
 
 ```shell
-python T6CNN.py -p feature_matrix.txt -f sequence.fa -pr 'model prefix' -d CUDA
+python T6CNN.py \
+   -p={}  \                    # feature_matrix
+   -f={}  \                    # protein fasta sequence file to be predicted
+   -pr={} \                    # model prefix
+   -d={}  \                    # Choose any cuda or cpu for prediction
 ```
 
 ## Testing Result
