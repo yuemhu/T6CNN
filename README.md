@@ -26,7 +26,7 @@ xxx
 python T6CNN.py \
    -p={}  \                    # feature_matrix
    -f={}  \                    # protein fasta sequence file to be predicted
-   -pr={} \                    # model prefix
+   -pr={} \                    # model prefix，such as aac_pssm, eedp, k_separated_bigrams_pssm, pse_pssm, aadp_pssm or bpb100
    -d={}  \                    # Choose any cuda or cpu for prediction
 ```
 
