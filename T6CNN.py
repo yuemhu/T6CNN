@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# python T6CNN.py -p /home/hym/data/smb/20230302-T6SE/input/AAC_DPC_TPC/AAC_T6SEs_29.tsv -f /home/hym/data/smb/20230302-T6SE/input/add_T6SE_Test_29_c0.6_formatchange.fa -pr AAC -d cuda:0
+# python T6CNN.py -p ./input/AAC_DPC_TPC/AAC_T6SEs_29.tsv -f ./input/add_T6SE_Test_29_c0.6_formatchange.fa -pr AAC -d cuda:0
 
 #Author : Yueming Hu
 #TIME:2023/03/30
