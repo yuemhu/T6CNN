@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-#cd /mnt/c/Users/Saige/Desktop/paper/T4SE_tools/T4SE_datasets
 # python Integbpb_Pos100AanFrequency.py -i protein sequences_rm.fa -l 100 -t N-ter -p Pos100AanFrequency -n Neg100AanFrequency -o bpb100AaNFrequency.data
 
 import argparse
@@ -16,23 +15,6 @@ def print_run(cmd):
 	print(cmd)
 	print("")
 	os.system(cmd)
-
-def GetPath(pathfilename):
-	#root = os.getcwd() #获取当前工作目录路径
-	file_names = os.listdir(pathfilename)
-	file_ob_list = {}
-	for file_name in file_names:
-		if file_name.endswith(".gz"):
-			fileob = pathfilename + '/' + file_name.strip() #循环地给这些文件名加上它前面的路径，以得到它的具体路径
-			#file_ob_list[fileob] = file_name.split('.')[0]
-			file_ob_list[fileob] = file_name.strip()
-	return file_ob_list
-def is_number(s):
-	try:
-		float(s)
-		return True
-	except ValueError:
-		return False
 def openCDhit(filename):
 	kind=filename.endswith(".gz")
 	output = {}
@@ -40,9 +22,6 @@ def openCDhit(filename):
 		protein = gzip.open(filename,'rt', encoding='utf-8')
 	else:
 		protein = open(filename)
-	#first_line = eQTL.readline()  # 取第一行
-	#first_line = first_line.split('\t')
-	#key = 0
 	output = {}
 	sequence = ""
 	proID = protein.readline()[1:].strip()  # 取第一行
@@ -163,12 +142,12 @@ def mergeFeature(NegFeature,PosFeature):
 	return Features
 def main(args):
 	parser = argparse.ArgumentParser()
-	parser.add_argument("-i","--inputdateset",help="collected Experimentally verified T4S effectors All/cd-hit 30% Training similarity  pathfile")
-	parser.add_argument("-f","--formatchange", default=False,help="collected Experimentally verified T4S effectors cd-hit 30% similarity format change")
+	parser.add_argument("-i","--inputdateset",help="collected Experimentally verified T6S effectors All/cd-hit 60% Training similarity  pathfile")
+	parser.add_argument("-f","--formatchange", default=False,help="collected Experimentally verified T4S effectors cd-hit 60% similarity format change")
 	parser.add_argument("-l","--length",type=int, default=100,help="Truncated C-terminal 100Aa number exclude length")
 	parser.add_argument("-p","--frequencyMatrixPos",help="C-terminal/N-terminal Postivate frequency Matrix")
 	parser.add_argument("-n","--frequencyMatrixNeg",help="C-terminal/N-terminal Negative frequency Matrix")
-	parser.add_argument("-t","--terminal",type=str, default="C-ter",help="C-terminal/N-terminal, default = C-ter")
+	parser.add_argument("-t","--terminal",type=str, default="N-ter",help="N-terminal/N-terminal, default = C-ter")
 	parser.add_argument("-o","--outputfileTer",help="xxAa C-terminal/N-terminal position-specific features pathfile")
 	args = parser.parse_args()
 	frequencyMatrixPos=args.frequencyMatrixPos
