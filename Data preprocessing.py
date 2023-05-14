@@ -16,10 +16,5 @@ seq_dict[names]=sequence
 input_file.close()
 with open("protein sequences_rm.fasta", "w") as output_file:
     for key,valueL in seq_dict.items():
-        if "B" not in valueL and "J" not in valueL and "O" not in valueL and "U" not in valueL and "X" not in valueL and "Z" not in valueL:
-            output_file.write(key+'\n')
-            output_file.write(valueL+'\n')
-        if len(valueL)>=50:
-            output_file.write(key+'\n')
-            output_file.write(valueL+'\n')
+        if len(valueL)>=50 adn "B" not in valueL and "J" not in valueL and "O" not in valueL and "U" not in valueL and "X" not in valueL and "Z" not in valueL:
 output_file.close()
