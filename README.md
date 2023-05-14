@@ -15,10 +15,15 @@ pip install -r requirements.txt
 ```
 ## Data Processing
 
-The data processing codes in xxx.py including:
-xxx
-xxx
-xxx
+Use the Data preprocessing.py to remove protein sequences less than 50 amino acids in length and those containing unnatural amino acids
+
+Use the Integbpb_Pos100AanFrequency.py to extract amino acid composition fearure matrix of the N-terminal signal sequence
+
+```shell
+   Pos100AanFrequency  \                    # Position-specific amino acid composition frequency of the positive sequences
+   Neg100AanFrequency  \                    # Position-specific amino acid composition frequency of the negative sequences
+```
+PSSM-based feature matrix is available at https://possum.erc.monash.edu/server.jsp
 
 ## Using T6CNN
 
