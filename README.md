@@ -21,9 +21,10 @@ Use the Integbpb_Pos100AanFrequency.py to extract amino acid composition fearure
 
 ```shell
 Integbpb_Pos100AanFrequency.py \
-   protein sequences_rm.fa \    # preprocessed protein sequence file to be predicted
-   Pos100AanFrequency      \    # Position-specific amino acid composition frequency of the positive sequences
-   Neg100AanFrequency      \    # Position-specific amino acid composition frequency of the negative sequences
+   -i protein_sequences_rm.fa  \    # preprocessed protein sequence file to be predicted
+   -p Pos100AanFrequency       \    # Position-specific amino acid composition frequency of the positive sequences
+   -n Neg100AanFrequency       \    # Position-specific amino acid composition frequency of the negative sequences
+   -o bpb100AaNFrequency.data  \    # position-specific features outputfile matrix
 ```
 PSSM-based feature matrix is available at https://possum.erc.monash.edu/server.jsp
 
