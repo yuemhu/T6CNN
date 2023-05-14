@@ -20,8 +20,10 @@ Use the Data preprocessing.py to remove protein sequences less than 50 amino aci
 Use the Integbpb_Pos100AanFrequency.py to extract amino acid composition fearure matrix of the N-terminal signal sequence
 
 ```shell
-   Pos100AanFrequency  \                    # Position-specific amino acid composition frequency of the positive sequences
-   Neg100AanFrequency  \                    # Position-specific amino acid composition frequency of the negative sequences
+Integbpb_Pos100AanFrequency.py \
+   protein sequences_rm.fa \    # preprocessed protein sequence file to be predicted
+   Pos100AanFrequency      \    # Position-specific amino acid composition frequency of the positive sequences
+   Neg100AanFrequency      \    # Position-specific amino acid composition frequency of the negative sequences
 ```
 PSSM-based feature matrix is available at https://possum.erc.monash.edu/server.jsp
 
