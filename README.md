@@ -27,7 +27,7 @@ Integbpb_Pos100AanFrequency.py \
    -o bpb100AaNFrequency.data  \    # position-specific features outputfile matrix
 ```
 PSSM-based feature matrix is available at https://possum.erc.monash.edu/server.jsp
-
+Protein pretrained language model (pLM) based feature matrix from ESM-2 (provided by [esm repository](https://github.com/facebookresearch/esm)).
 ## Using T6CNN
 
 ```shell
