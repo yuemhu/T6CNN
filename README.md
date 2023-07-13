@@ -34,7 +34,7 @@ PSSM-based feature matrix is available at https://possum.erc.monash.edu/server.j
 python T6CNN.py \
    -p={}        \                  # feature_matrix
    -f={}        \                  # protein fasta sequence file to be predicted
-   -pr={}       \                  # model prefix，such as aac_pssm, eedp, k_separated_bigrams_pssm, pse_pssm, aadp_pssm or bpb100
+   -pr={}       \                  # model prefix，such as aac_pssm, eedp, k_separated_bigrams_pssm, pse_pssm, aadp_pssm, bpb100, or ESM-2
    -d={}        \                  # Choose any cuda or cpu for prediction. default='cuda:0'
 ```
 After running T6CNN.py, you will get the prediction results in the current directory, the file name is composed of model prefix and '_T6probability.csv' (such as 'aac_pssm_T6probability.csv').
