@@ -16,7 +16,7 @@ import argparse
 import sys
 import math
 from Bio import SeqIO
-from T6SECNN.model import T6CNN_single,T6CNN
+from T6SECNN.model import T6CNN_single,T6CNN,T6CNN_pLM
 from T6SECNN.dataset import load_data,TestdataSet
 args = sys.argv
 
@@ -32,7 +32,9 @@ def Testing(kfold,X_test,prefix,device,fasta,batch_size=5):
     i=0
     # create model and load weights from checkpoint
     if prefix == "ps100" or prefix == "bpb100" or prefix =="DPC":
-         net =  T6CNN_single(in_dim).to(device)  ### 实例化模型
+        net =  T6CNN_single(in_dim).to(device)  ### 实例化模型
+    elif prefix =="ESM-2":
+        net =  T6CNN_pLM(in_dim).to(device)  ### 实例化模型
     else:
         net =  T6CNN(in_dim).to(device)  ### 实例化模型
     allpredict = []
