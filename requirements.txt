@@ -2,3 +2,4 @@ torch==1.10.1
 pandas==1.2.0
 numpy==1.20.3
 biopython
+transformers==4.14.1
