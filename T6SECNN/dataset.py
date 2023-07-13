@@ -24,6 +24,14 @@ def load_data(T6SE,T6SEfasta,prefix):  ###此过程主要是步骤（1）
         T6SE_file =np.loadtxt(T6SE,delimiter='\t',dtype=str,skiprows=1)
         names = T6SE_file[:,0]
         T6SE_file = T6SE_file[:,1:].astype(np.float32)
+    elif prefix == "ESM-2":
+        T6SE_dir=os.listdir(T6SE)
+        T6SE_file = []
+        for name in T6SE_dir:
+            t6temp=torch.load(T6SE+"/"+name)['mean_representations'][33].unsqueeze(0)
+            T6SE_file.append(t6temp)
+        T6SE_file = torch.cat(T6SE_file,dim=0).numpy()
+        names = np.array(T6SE_dir) 
     else:
         T6SE_file =np.loadtxt(T6SE,delimiter=',',dtype=np.float32)
         names = openfasta(T6SEfasta)
