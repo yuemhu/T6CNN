@@ -147,7 +147,7 @@ def main(args):
 	parser.add_argument("-l","--length",type=int, default=100,help="Truncated C-terminal 100Aa number exclude length")
 	parser.add_argument("-p","--frequencyMatrixPos",help="C-terminal/N-terminal Postivate frequency Matrix")
 	parser.add_argument("-n","--frequencyMatrixNeg",help="C-terminal/N-terminal Negative frequency Matrix")
-	parser.add_argument("-t","--terminal",type=str, default="N-ter",help="N-terminal/N-terminal, default = C-ter")
+	parser.add_argument("-t","--terminal",type=str, default="N-ter",help="N-terminal/N-terminal, default = N-ter")
 	parser.add_argument("-o","--outputfileTer",help="xxAa C-terminal/N-terminal position-specific features pathfile")
 	args = parser.parse_args()
 	frequencyMatrixPos=args.frequencyMatrixPos
