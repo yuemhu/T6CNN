@@ -47,6 +47,7 @@ def DictTofile(output_dict,outputfile):
 	f_out.close()
 def FeatureTofile(output_dict,outputfile):
 	f_out = open(outputfile, "w")#创建文件对象
+	'''
 	for key,valueL in output_dict.items():
 		length = len(valueL)
 		for i in range(length):
@@ -56,6 +57,7 @@ def FeatureTofile(output_dict,outputfile):
 				f_out.write(str(valueL[i])+ ',')
 		# f_out.write('\n')
 	f_out.close()
+	'''
 	f_out = open(outputfile.split(".data")[0]+"_name.data", "w")#创建文件对象
 	for key,valueL in output_dict.items():
 		length = len(valueL)
